@@ -1,0 +1,17 @@
+class Solution(object):
+    def removeDuplicates(self, s):
+        
+        stack = []
+
+        for ch in s:
+
+            if stack and stack[-1] == ch:
+                stack.pop()
+
+            else:
+                stack.append(ch)
+
+        return "".join(stack)
+    
+# Time Complexity: O(n)
+# Space Complexity: O(n)
